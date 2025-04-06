@@ -1,0 +1,81 @@
+2024-02-27 13:15:48,150:INFO:ml_pipeline.utils:main:20:Final merged data fetched from Hopsworks.
+2024-02-27 13:15:48,150:INFO:ml_pipeline.utils:main:20:Final merged data fetched from Hopsworks.
+2024-02-27 13:15:48,150:INFO:ml_pipeline.utils:main:20:Final merged data fetched from Hopsworks.
+2024-02-27 13:15:48,150:INFO:ml_pipeline.utils:main:20:Final merged data fetched from Hopsworks.
+2024-02-27 13:15:48,191:INFO:ml_pipeline.utils:main:25:Data split into train test and validation sets.
+2024-02-27 13:15:48,191:INFO:ml_pipeline.utils:main:25:Data split into train test and validation sets.
+2024-02-27 13:15:48,191:INFO:ml_pipeline.utils:main:25:Data split into train test and validation sets.
+2024-02-27 13:15:48,191:INFO:ml_pipeline.utils:main:25:Data split into train test and validation sets.
+2024-02-27 13:15:48,234:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,234:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,234:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,234:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,249:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,249:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,249:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,249:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,279:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,279:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,279:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,279:INFO:ml_pipeline.utils:drop_null_values:14:Null values dropped successfully.
+2024-02-27 13:15:48,284:INFO:ml_pipeline.utils:calculate_mode:27:Mode calculated successfully for load_capacity_pounds.
+2024-02-27 13:15:48,284:INFO:ml_pipeline.utils:calculate_mode:27:Mode calculated successfully for load_capacity_pounds.
+2024-02-27 13:15:48,284:INFO:ml_pipeline.utils:calculate_mode:27:Mode calculated successfully for load_capacity_pounds.
+2024-02-27 13:15:48,284:INFO:ml_pipeline.utils:calculate_mode:27:Mode calculated successfully for load_capacity_pounds.
+2024-02-27 13:15:48,290:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,290:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,290:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,290:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,292:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,292:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,292:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,292:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,296:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,296:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,296:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,296:INFO:ml_pipeline.utils:fill_missing_values_with_mode:40:Missing values in load_capacity_pounds filled with mode value.
+2024-02-27 13:15:48,501:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,501:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,501:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,501:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,502:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,502:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,502:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,502:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,589:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:52:One-Hot Encoding completed successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:48,774:INFO:ml_pipeline.utils:process_categorical_data:55:Original categorical features dropped successfully.
+2024-02-27 13:15:49,320:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,320:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,320:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,320:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,653:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,653:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,653:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,653:INFO:ml_pipeline.utils:scale_data:68:Data scaling completed successfully.
+2024-02-27 13:15:49,655:INFO:ml_pipeline.utils:save_encoder_scaler:82:Encoder and scaler saved successfully.
+2024-02-27 13:15:49,655:INFO:ml_pipeline.utils:save_encoder_scaler:82:Encoder and scaler saved successfully.
+2024-02-27 13:15:49,655:INFO:ml_pipeline.utils:save_encoder_scaler:82:Encoder and scaler saved successfully.
+2024-02-27 13:15:49,655:INFO:ml_pipeline.utils:save_encoder_scaler:82:Encoder and scaler saved successfully.
+2024-02-27 13:15:49,786:INFO:ml_pipeline.utils:main:36:Model Training started.
+2024-02-27 13:15:49,786:INFO:ml_pipeline.utils:main:36:Model Training started.
+2024-02-27 13:15:49,786:INFO:ml_pipeline.utils:main:36:Model Training started.
+2024-02-27 13:15:49,786:INFO:ml_pipeline.utils:main:36:Model Training started.
+2024-02-27 13:17:12,834:INFO:ml_pipeline.utils:main:38:Model Training and Registration Completed
+2024-02-27 13:17:12,834:INFO:ml_pipeline.utils:main:38:Model Training and Registration Completed
+2024-02-27 13:17:12,834:INFO:ml_pipeline.utils:main:38:Model Training and Registration Completed
+2024-02-27 13:17:12,834:INFO:ml_pipeline.utils:main:38:Model Training and Registration Completed
+2024-03-05 08:42:22,805:ERROR:ml_pipeline.utils:fetch_data:80:An error occurred during data fetching: unexpected exception

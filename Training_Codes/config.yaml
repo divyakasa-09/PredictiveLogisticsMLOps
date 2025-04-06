@@ -1,0 +1,205 @@
+# config.yaml
+postgres:
+  user: 'postgres'
+  password: ''
+  host: ''
+  database: ''
+  port: 5432
+
+mysql:
+  host: ''
+  user: 'admin'
+  password: ''
+  database: 'truckdb'
+
+table_names:
+  routes_data: 'routes_details'
+  route_weather: 'routes_weather'
+  drivers_data: 'drivers_details'
+  trucks_data: 'truck_details'
+  traffic_data: 'traffic_details'
+  schedule_data: 'truck_schedule_data'
+  weather_data: 'city_weather'
+
+hopsworks:
+  api_key: ''
+  feature_group_name: 'final_data'
+  feature_group_version: 1
+  use_hive_option: True
+  event_time: '2023-08-23'
+
+
+wandb:
+  wandb_api_key : ''
+  wandb_project : 'eta-classification'
+  wandb_user : 'team7'
+
+# Specify date ranges
+split_date_ranges:
+  train_end_date: '2019-01-30'
+  test_start_date: '2019-02-07'
+
+
+# Specify features
+features:
+  cts_col_names : ['route_avg_temp', 'route_avg_wind_speed',
+        'route_avg_precip', 'route_avg_humidity', 'route_avg_visibility',
+        'route_avg_pressure', 'distance', 'average_hours',
+        'origin_temp', 'origin_wind_speed', 'origin_precip', 'origin_humidity',
+        'origin_visibility', 'origin_pressure',
+        'destination_temp','destination_wind_speed','destination_precip',
+        'destination_humidity', 'destination_visibility','destination_pressure',
+          'avg_no_of_vehicles', 'truck_age','load_capacity_pounds', 'mileage_mpg',
+          'age', 'experience','average_speed_mph']
+
+  cat_col_names : ['route_description',
+        'origin_description', 'destination_description',
+          'accident', 'fuel_type',
+        'gender', 'driving_style', 'ratings','is_midnight']
+
+  encode_column_names: [
+      'route_description',
+  'origin_description',
+  'destination_description',
+  'fuel_type',
+  'gender',
+  'driving_style']
+
+  columns_to_drop_null_values: ['origin_temp', 'origin_wind_speed', 'origin_precip', 'origin_humidity', 'origin_visibility', 'origin_pressure']
+
+  target: 'delay'
+
+
+
+
+
+data_descriptions:
+  drivers_details: [{'name': 'driver_id', 'description': 'unique identification for each driver'},
+            {'name': 'name', 'description': 'name of the truck driver'},
+            {'name': 'gender', 'description': 'gender of the truck driver'},
+            {"name": "age", "description": "age of the truck driver"},
+            {"name": "experience", "description": "experience of the truck driver in years"},
+            {"name": "driving_style", "description": "driving style of the truck driver, conservative or proactive"},
+            {"name": "ratings", "description": "average rating of the truck driver on a scale of 1 to 5"},
+            {"name": "vehicle_no", "description": "the number of the driver’s truck"},
+            {"name": "average_speed_mph", "description": "average speed of the truck driver in miles per hour"},
+            {"name": "event_time", "description": "dummy event time"}]
+
+  truck_details: [
+            {"name":'truck_id',"description":"the unique identification number of the truck"},
+            {"name":'truck_age',"description":"age of the truck in years"},
+            {"name":'load_capacity_pounds',"description":"loading capacity of the truck in years"},
+            {"name":'mileage_mpg',"description": "mileage of the truck in miles per gallon"},
+            {"name":'fuel_type',"description":"fuel type of the truck"},
+            {"name": "event_time", "description": "dummy event time"}
+
+        ]
+
+  routes_details: [
+    {"name": 'route_id', "description": "the unique identifier of the routes"},
+    {"name": 'origin_id', "description": "the city identification number for the origin city"},
+    {"name": 'destination_id', "description": " the city identification number for the destination"},
+    {"name": 'distance', "description": " the distance between the origin and destination cities in miles"},
+    {"name": 'average_hours', "description": "average time needed to travel from the origin to the destination in hours"},
+    {"name": "event_time", "description": "dummy event time"}]
+
+  schedule_details: [
+    {"name": 'truck_id', "description": "the unique identifier of the truck"},
+    {"name": 'route_id', "description": "the unique identifier of the route"},
+    {"name": 'departure_date', "description": "departure DateTime of the truck"},
+    {"name": 'estimated_arrival', "description": "estimated arrival DateTime of the truck"},
+    {"name": 'delay', "description": "binary variable if the truck’s arrival was delayed, 0 for on-time arrival and 1 for delayed arrival"}]
+
+  traffic_details: [
+     {"name": 'route_id', "description": "the identification number of the route"},
+     {"name": 'date', "description": " date of the traffic observation"},
+     {"name": 'hour', "description": "the hour of the observation as a number in 24-hour format"},
+     {"name": 'no_of_vehicles', "description": "the number of vehicles observed on the route"},
+     {"name": 'accident', "description": "binary variable to denote if an accident was observed"}]
+
+  city_weather_details: [
+    {"name": 'city_id', "description":  'the unique identifier of the city'},
+    {"name": 'date', "description":  'date of the observation'},
+    {"name": 'hour', "description": 'the hour of the observation as a number in 24hour format'},
+    {"name": 'temp', "description":  'temperature in Fahrenheit'},
+    {"name": 'wind_speed', "description":  'wind speed in miles per hour'},
+    {"name": 'description', "description":  'description of the weather conditions such as Clear, Cloudy, etc'},
+    {"name": 'precip', "description":  'precipitation in inches'},
+    {"name": 'humidity', "description":  'humidity observed'},
+    {"name": 'visibility', "description":  'visibility observed in miles per hour'},
+    {"name": 'pressure', "description":  'pressure observed in millibar'},
+    {"name": 'chanceofrain', "description":  'chances of rain'},
+    {"name": 'chanceoffog', "description":  'chances of fog'},
+    {"name": 'chanceofsnow', "description":  'chances of snow'},
+    {"name": 'chanceofthunder', "description":  'chances of thunder'}]
+
+  route_weather_details: [
+
+    {"name": 'route_id', "description":  'the unique identifier of the city'},
+    {"name": 'date', "description":  'date of the observation'},
+    {"name": 'temp', "description":  'temperature in Fahrenheit'},
+    {"name": 'wind_speed', "description":  'wind speed in miles per hour'},
+    {"name": 'description', "description":  'description of the weather conditions such as Clear, Cloudy, etc'},
+    {"name": 'precip', "description":  'precipitation in inches'},
+    {"name": 'humidity', "description":  'humidity observed'},
+    {"name": 'visibility', "description":  'visibility observed in miles per hour'},
+    {"name": 'pressure', "description":  'pressure observed in millibar'},
+    {"name": 'chanceofrain', "description":  'chances of rain'},
+    {"name": 'chanceoffog', "description":  'chances of fog'},
+    {"name": 'chanceofsnow', "description":  'chances of snow'},
+    {"name": 'chanceofthunder', "description":  'chances of thunder'}
+
+]
+
+  final_data_details: [
+    {"name": 'unique_id', "description": "the unique identifier for each record"},
+    {"name": 'truck_id', "description": "the unique identifier of the truck"},
+    {"name": 'route_id', "description": "the unique identifier of the route"},
+    {"name": 'departure_date', "description": "departure DateTime of the truck"},
+    {"name": 'estimated_arrival', "description": "estimated arrival DateTime of the truck"},
+    {"name": 'delay', "description": "binary variable if the truck’s arrival was delayed, 0 for on-time arrival and 1 for delayed arrival"},
+    {"name": 'route_avg_temp', "description":  'Average temperature in Fahrenheit'},
+    {"name": 'route_avg_wind_speed', "description":  'Average wind speed in miles per hour'},
+    {"name": 'route_avg_precip', "description":  'Average precipitation in inches'},
+    {"name": 'route_avg_humidity', "description":  'Average humidity observed'},
+    {"name": 'route_avg_visibility', "description":  'Average visibility observed in miles per hour'},
+    {"name": 'route_avg_pressure', "description":  'Average pressure observed in millibar'},
+    {"name": 'route_description', "description":  'description of the weather conditions such as Clear, Cloudy, etc'},
+    {"name": 'estimated_arrival_nearest_hour', "description":  'estimated arrival DateTime of the truck'},
+    {"name": 'departure_date_nearest_hour', "description":  'departure DateTime of the truck'},
+    {"name": 'origin_id', "description": "the city identification number for the origin city"},
+    {"name": 'destination_id', "description": " the city identification number for the destination"},
+    {"name": 'distance', "description": " the distance between the origin and destination cities in miles"},
+    {"name": 'average_hours', "description": "average time needed to travel from the origin to the destination in hours"},
+    {"name": 'origin_temp', "description":  'temperature in Fahrenheit'},
+    {"name": 'origin_wind_speed', "description":  'wind speed in miles per hour'},
+    {"name": 'origin_description', "description":  'description of the weather conditions such as Clear, Cloudy, etc'},
+    {"name": 'origin_precip', "description":  'precipitation in inches'},
+    {"name": 'origin_humidity', "description":  'humidity observed'},
+    {"name": 'origin_visibility', "description":  'visibility observed in miles per hour'},
+    {"name": 'origin_pressure', "description":  'pressure observed in millibar'},
+    {"name": 'destination_temp', "description":  'temperature in Fahrenheit'},
+    {"name": 'destination_wind_speed', "description":  'wind speed in miles per hour'},
+    {"name": 'destination_description', "description":  'description of the weather conditions such as Clear, Cloudy, etc'},
+    {"name": 'destination_precip', "description":  'precipitation in inches'},
+    {"name": 'destination_humidity', "description":  'humidity observed'},
+    {"name": 'destination_visibility', "description":  'visibility observed in miles per hour'},
+    {"name": 'destination_pressure', "description":  'pressure observed in millibar'},
+    {"name": 'avg_no_of_vehicles', "description": "the average number of vehicles observed on the route"},
+    {"name": 'accident', "description": "binary variable to denote if an accident was observed"},
+    {"name":'truck_age',"description":"age of the truck in years"},
+    {"name":'load_capacity_pounds',"description":"loading capacity of the truck in years"},
+    {"name":'mileage_mpg',"description": "mileage of the truck in miles per gallon"},
+    {"name":'fuel_type',"description":"fuel type of the truck"},
+    {"name": "driver_id", "description": "unique identification for each driver"},
+    {"name": "name", "description": " name of the truck driver"},
+    {"name": "gender", "description": "gender of the truck driver"},
+    {"name": "age", "description": "age of the truck driver"},
+    {"name": "experience", "description": " experience of the truck driver in years"},
+    {"name": "driving_style", "description": "driving style of the truck driver, conservative or proactive"},
+    {"name": "ratings", "description": "average rating of the truck driver on a scale of 1 to 5"},
+    {"name": "vehicle_no", "description": "the number of the driver’s truck"},
+    {"name": "average_speed_mph", "description": "average speed the truck driver in miles per hour"},
+    {"name": 'is_midnight', "description": "binary variable to denote if it was midnight"}
+
+]

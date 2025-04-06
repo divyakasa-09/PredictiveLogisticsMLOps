@@ -7,9 +7,7 @@ import boto3
 import pymysql
 
 def lambda_handler(event, context):
-    # TODO implement
     
-    # Your existing code for database connection
     connection = psycopg2.connect(
         user="",
         password="",
